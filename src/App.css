@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+/*Nav Header*/
+.navbar {
+    background-color: rgba(0,0,0, 0.5);
+    padding: 30px;
+    border-color: #008ba3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icons {
+    font-size: 48px;
+    color: #9a0007;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*Nav Footer*/
+.footer {
+    background-color: rgba(0,0,0, 0.5);
+    padding: 30px;
+    margin: 0px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#mail {
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Background Image */
+body {
+    background: url(./shared/images/Scene.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Picture*/
+#myFace {
+    height: 250px;
+}
+
+.card-img {
+    height: 150px;
+}
+
+/*Resume*/
+.resume{
+    background-color: white;
+}
+
+.resumeLine {
+    height: 1.5px;
+    background-color: black;
+}
+
+.homeText {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
 }
