@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
-import Header from './HeaderComponent';
+import Header from './AppWrapper/HeaderComponent';
 import Project from './ProjectComponent';
-import Footer from './FooterComponent';
+import Footer from './AppWrapper/FooterComponent';
 import Resume from './ResumeComponent';
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { PROJECTS } from '../shared/projects'
