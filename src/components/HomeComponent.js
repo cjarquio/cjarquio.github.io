@@ -1,12 +1,12 @@
 import React from 'react';
 import Me from '../shared/images/Me.jpg'
 
-function About() {
+const About = () => {
     return (
         <div className="container">
             <div className="row row-content ">
                 <div className="col-12 col-md-3 align-self-center">
-                        <img src={Me} alt="Me" id="myFace" />
+                    <img src={Me} alt="Me" id="myFace" />
                 </div>
                 <div className="col-12 col-md-1"></div>
                 <div className="col-12 col-md-8 align-self-center text-left homeText">
@@ -17,10 +17,10 @@ function About() {
                 </div>
             </div>
         </div>
-        );
+    );
 }
 
-function Home(props) {
+const Home = () => {
     return (
         <div>
             <About />
