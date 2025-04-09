@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Navbar, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
