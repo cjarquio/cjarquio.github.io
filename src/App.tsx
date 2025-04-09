@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./App.css";
-import Main from "./components/MainComponent";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import './App.css';
+import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom';
 
 export const App = () => {
   return (

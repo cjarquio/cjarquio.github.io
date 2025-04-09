@@ -17,12 +17,12 @@ const Project = (passedProjects: any) => {
     );
   });
 
-  //   const onProjectSelect = (project: any) => setSelectedProject(project);
+  const onProjectSelect = (project: any) => setSelectedProject(project);
 
   const renderProject = (project: any) => {
     if (project != null)
       return (
-        <Card>
+        <Card onClick={() => onProjectSelect(project)}>
           <CardImg top src={project.image} alt={project.name} />
           <CardBody>
             <CardTitle>{project.name}</CardTitle>
