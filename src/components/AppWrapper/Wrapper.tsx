@@ -1,7 +1,7 @@
 import './App.css';
 
-export const App = () => {
+export const Wrapper = () => {
   return <div className="App">App</div>;
 };
 
-export default App;
+export default Wrapper;

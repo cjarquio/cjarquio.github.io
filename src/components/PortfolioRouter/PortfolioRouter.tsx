@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router';
-import App from '../../App';
+import Wrapper from '../AppWrapper/Wrapper';
 
 const PortfolioRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Wrapper />} />
     </Routes>
   );
 };
