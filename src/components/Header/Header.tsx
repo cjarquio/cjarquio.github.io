@@ -1,5 +1,12 @@
 import { useState } from 'react';
-import { Container, Group } from '@mantine/core';
+import {
+  ActionIcon,
+  Container,
+  Group,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from '@mantine/core';
+import { IconMoon, IconSun } from '@tabler/icons-react';
 import classes from './Header.module.css';
 
 const links = [
@@ -10,6 +17,10 @@ const links = [
 
 const Header = () => {
   const [active, setActive] = useState(links[0].link);
+  const { setColorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme('light', {
+    getInitialValueInEffect: true,
+  });
 
   const items = links.map((link) => (
     <a
@@ -32,6 +43,22 @@ const Header = () => {
         LOGO
         <Group gap={5} visibleFrom="xs">
           {items}
+        </Group>
+        <Group justify="center">
+          <ActionIcon
+            onClick={() =>
+              setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')
+            }
+            variant="default"
+            size="xl"
+            aria-label="Toggle color scheme"
+          >
+            {computedColorScheme === 'light' ? (
+              <IconSun className={classes.light} stroke={1.5} />
+            ) : (
+              <IconMoon className={classes.dark} stroke={1.5} />
+            )}
+          </ActionIcon>
         </Group>
       </Container>
     </header>

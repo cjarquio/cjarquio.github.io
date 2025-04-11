@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Wrapper from './components/Wrapper/Wrapper';
+import Wrapper from './components/AppWrapper/Wrapper';
 
 test('renders learn react link', () => {
   render(<Wrapper />);
