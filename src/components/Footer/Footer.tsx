@@ -1,11 +1,12 @@
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-} from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { ActionIcon, Container, Group, Text } from '@mantine/core';
 import classes from './Footer.module.css';
 
 export const Footer = () => {
+  const openExternalLink = (link: string) => {
+    window.open(link, '_blank');
+  };
+
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
@@ -16,10 +17,24 @@ export const Footer = () => {
           justify="flex-end"
           wrap="nowrap"
         >
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon
+            size="lg"
+            color="gray"
+            variant="subtle"
+            onClick={() => {
+              openExternalLink(
+                'https://www.linkedin.com/in/charles-jarquio-116210104/'
+              );
+            }}
+          >
             <IconBrandLinkedin size={'3em'} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon
+            size="lg"
+            color="gray"
+            variant="subtle"
+            onClick={() => openExternalLink('https://github.com/cjarquio')}
+          >
             <IconBrandGithub size={'3rem'} stroke={1.5} />
           </ActionIcon>
         </Group>
