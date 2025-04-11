@@ -1,14 +1,15 @@
 .header {
-  height: 56px;
+  height: 4rem;
   margin-bottom: 120px;
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .inner {
-  height: 56px;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
 .link {
