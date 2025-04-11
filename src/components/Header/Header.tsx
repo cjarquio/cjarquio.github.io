@@ -5,8 +5,10 @@ import {
   Group,
   useComputedColorScheme,
   useMantineColorScheme,
+  Image,
 } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
+import Logo from '../../shared/images/Logo.jpeg';
 import classes from './Header.module.css';
 
 const links = [
@@ -40,7 +42,7 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        LOGO
+        <Image className={classes.logo} radius="md" src={Logo} />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>

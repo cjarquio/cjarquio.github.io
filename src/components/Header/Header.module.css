@@ -34,6 +34,10 @@
   }
 }
 
+.logo {
+  height: 100%;
+}
+
 .dark {
   width: 22px;
   height: 22px;
