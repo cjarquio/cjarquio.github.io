@@ -1,24 +1,25 @@
 import { AppShell, AppShellProps, Group } from '@mantine/core';
 import PortfolioRouter from '../PortfolioRouter/PortfolioRouter';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 export const Wrapper: React.FC<AppShellProps> = (props: AppShellProps) => {
   return (
     <AppShell
       layout="alt"
-      header={{ height: 60 }}
-      footer={{ height: 60 }}
+      header={{ height: '4rem' }}
+      footer={{ height: '6rem' }}
       padding="md"
     >
       <AppShell.Header>
-        <Group h="100%" px="md">
-          <Header />
-        </Group>
+        <Header />
       </AppShell.Header>
       <AppShell.Main>
         <PortfolioRouter />
       </AppShell.Main>
-      <AppShell.Footer p="md">Footer</AppShell.Footer>
+      <AppShell.Footer p="lg">
+        <Footer />
+      </AppShell.Footer>
     </AppShell>
   );
 };
