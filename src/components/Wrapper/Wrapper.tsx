@@ -1,5 +1,6 @@
-import { AppShell, AppShellProps, Group, Text } from '@mantine/core';
+import { AppShell, AppShellProps, Group } from '@mantine/core';
 import PortfolioRouter from '../PortfolioRouter/PortfolioRouter';
+import Header from '../Header/Header';
 
 export const Wrapper: React.FC<AppShellProps> = (props: AppShellProps) => {
   return (
@@ -11,7 +12,7 @@ export const Wrapper: React.FC<AppShellProps> = (props: AppShellProps) => {
     >
       <AppShell.Header>
         <Group h="100%" px="md">
-          <Text>Hello</Text>
+          <Header />
         </Group>
       </AppShell.Header>
       <AppShell.Main>
