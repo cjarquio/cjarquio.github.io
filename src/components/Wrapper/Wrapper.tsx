@@ -1,4 +1,4 @@
-import { AppShell, AppShellProps, Group } from '@mantine/core';
+import { AppShell, AppShellProps } from '@mantine/core';
 import PortfolioRouter from '../PortfolioRouter/PortfolioRouter';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
