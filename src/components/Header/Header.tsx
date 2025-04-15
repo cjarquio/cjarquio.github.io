@@ -10,6 +10,7 @@ import {
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import Logo from '../../shared/images/Logo.jpeg';
 import classes from './Header.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const links = [
   { link: '/about', label: 'About Me' },
@@ -18,8 +19,9 @@ const links = [
 ];
 
 const Header = () => {
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState<string | null>(links[0].link);
   const { setColorScheme } = useMantineColorScheme();
+  const navigate = useNavigate();
   const computedColorScheme = useComputedColorScheme('light', {
     getInitialValueInEffect: true,
   });
@@ -33,16 +35,24 @@ const Header = () => {
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
+        navigate(link.link);
       }}
     >
       {link.label}
     </a>
   ));
 
+  const returnHome = () => {
+    setActive(null);
+    navigate('/');
+  };
+
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Image className={classes.logo} radius="md" src={Logo} />
+        <ActionIcon size="xxl" radius={'md'} color="gray" onClick={returnHome}>
+          <Image className={classes.logo} radius="md" src={Logo} />
+        </ActionIcon>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
