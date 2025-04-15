@@ -31,15 +31,14 @@ export const ContactIcon = ({
   );
 };
 
-const MOCKDATA = [
-  { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
-  { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
-  { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+const contactInformation = [
+  { title: 'Email', description: 'cjarquio@gmail.com', icon: IconAt },
+  { title: 'Phone', description: '+1 (808) 346 - 6221', icon: IconPhone },
+  { title: 'Location', description: 'Federal Way, WA', icon: IconMapPin },
 ];
 
 export function ContactIconsList() {
-  const items = MOCKDATA.map((item, index) => (
+  const items = contactInformation.map((item, index) => (
     <ContactIcon key={index} {...item} />
   ));
   return <Stack>{items}</Stack>;
