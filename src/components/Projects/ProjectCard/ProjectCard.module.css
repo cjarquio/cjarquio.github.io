@@ -50,3 +50,9 @@
   font-size: var(--mantine-font-size-xs);
   font-weight: 700;
 }
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

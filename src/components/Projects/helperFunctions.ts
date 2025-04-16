@@ -13,5 +13,17 @@ export const projects: ProjectProps[] = [
     imageUrl: "https://via.placeholder.com/150",
     link: "https://example.com/project2",
   },
+  {
+    title: "Project 3",
+    description: "This is the third project.",
+    imageUrl: "https://via.placeholder.com/150",
+    link: "https://example.com/project2",
+  },
+  {
+    title: "Project 4",
+    description: "This is the fourth project.",
+    imageUrl: "https://via.placeholder.com/150",
+    link: "https://example.com/project2",
+  },
   // Add more projects as needed
 ]

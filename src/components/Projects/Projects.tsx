@@ -1,6 +1,7 @@
-import { Container } from '@mantine/core';
-import { ProjectCard } from './ProjectCard';
+import { Container, SimpleGrid } from '@mantine/core';
+import { ProjectCard } from './ProjectCard/ProjectCard';
 import { projects } from './helperFunctions';
+import classes from './Projects.module.css';
 
 export interface ProjectProps {
   title: string;
@@ -11,10 +12,17 @@ export interface ProjectProps {
 
 export const Projects = () => {
   return (
-    <Container size="xl">
-      {projects.map((project: ProjectProps) => (
-        <ProjectCard key={project.title} project={project} />
-      ))}
+    <Container className={classes.main} size="xl">
+      <SimpleGrid
+        mt={60}
+        cols={{ base: 1, sm: 2, md: 3 }}
+        spacing={{ base: 'xl', md: 50 }}
+        verticalSpacing={{ base: 'xl', md: 50 }}
+      >
+        {projects.map((project: ProjectProps) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </SimpleGrid>
     </Container>
   );
 };

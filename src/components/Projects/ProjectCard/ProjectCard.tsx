@@ -8,7 +8,7 @@ import {
   Button,
 } from '@mantine/core';
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
-import { ProjectProps } from './Projects';
+import { ProjectProps } from '../Projects';
 import classes from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -28,7 +28,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
           {project.title}
         </Text>
         <Stack>
-          <Group>
+          <Group className={classes.buttonGroup}>
             <ActionIcon variant="default" radius="md" size={36}>
               <IconBrandGithub className={classes.like} stroke={1.5} />
             </ActionIcon>
