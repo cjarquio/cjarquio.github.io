@@ -1,5 +1,13 @@
-import { Card, Group, Image, ActionIcon, Text } from '@mantine/core';
-import { IconHeart } from '@tabler/icons-react';
+import {
+  Card,
+  Group,
+  Image,
+  ActionIcon,
+  Text,
+  Stack,
+  Button,
+} from '@mantine/core';
+import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 import { ProjectProps } from './Projects';
 import classes from './ProjectCard.module.css';
 
@@ -19,9 +27,19 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <Text fz="lg" fw={500}>
           {project.title}
         </Text>
-        <ActionIcon variant="default" radius="md" size={36}>
-          <IconHeart className={classes.like} stroke={1.5} />
-        </ActionIcon>
+        <Stack>
+          <Group>
+            <ActionIcon variant="default" radius="md" size={36}>
+              <IconBrandGithub className={classes.like} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon variant="default" radius="md" size={36}>
+              <IconExternalLink className={classes.like} stroke={1.5} />
+            </ActionIcon>
+          </Group>
+          <Button radius="md" style={{ flex: 1 }}>
+            Show details
+          </Button>
+        </Stack>
       </Group>
     </Card>
   );
