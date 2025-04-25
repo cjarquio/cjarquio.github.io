@@ -1,12 +1,22 @@
-import { Container, Flex, Group, Tabs } from '@mantine/core';
+import { Container, Flex, Group, Tabs, Image } from '@mantine/core';
 import { AboutMe } from './AboutMe/AboutMe';
+import ProfilePic from '../../shared/images/Profile.jpg';
 
 export const About = () => {
   return (
     <Container fluid>
       <Group grow preventGrowOverflow={false} wrap="nowrap">
         {/** TODO: Insert image */}
-        <h1>About Me</h1>
+        <Container>
+          <Image
+            src={ProfilePic}
+            alt="Me"
+            fit="contain"
+            height={'100%'}
+            width={'auto'}
+            radius="md"
+          />
+        </Container>
         <Flex gap={5} justify="start" align="start">
           <Tabs defaultValue="about" orientation="vertical">
             <Tabs.List>
