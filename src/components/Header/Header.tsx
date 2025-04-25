@@ -10,7 +10,7 @@ import {
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import Logo from '../../shared/images/Logo.jpeg';
 import classes from './Header.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const links = [
   { link: '/about', label: 'About Me' },
@@ -19,7 +19,8 @@ const links = [
 ];
 
 const Header = () => {
-  const [active, setActive] = useState<string | null>(null);
+  const location = useLocation();
+  const [active, setActive] = useState<string | null>(location.pathname);
   const { setColorScheme } = useMantineColorScheme();
   const navigate = useNavigate();
   const computedColorScheme = useComputedColorScheme('light', {
