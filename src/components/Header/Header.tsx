@@ -19,7 +19,7 @@ const links = [
 ];
 
 const Header = () => {
-  const [active, setActive] = useState<string | null>(links[0].link);
+  const [active, setActive] = useState<string | null>(null);
   const { setColorScheme } = useMantineColorScheme();
   const navigate = useNavigate();
   const computedColorScheme = useComputedColorScheme('light', {
