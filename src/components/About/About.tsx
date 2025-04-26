@@ -1,12 +1,12 @@
 import { Container, Flex, Group, Tabs, Image } from '@mantine/core';
 import { AboutMe } from './AboutMe/AboutMe';
 import ProfilePic from '../../shared/images/Profile.jpg';
+import { Experience } from './Experience/Experience';
 
 export const About = () => {
   return (
     <Container fluid>
       <Group grow preventGrowOverflow={false} wrap="nowrap">
-        {/** TODO: Insert image */}
         <Container>
           <Image
             src={ProfilePic}
@@ -30,7 +30,9 @@ export const About = () => {
             <Tabs.Panel value="about">
               <AboutMe />
             </Tabs.Panel>
-            <Tabs.Panel value="experience">Messages tab content</Tabs.Panel>
+            <Tabs.Panel value="experience">
+              <Experience />
+            </Tabs.Panel>
             <Tabs.Panel value="education">Education</Tabs.Panel>
             <Tabs.Panel value="skills">Skills</Tabs.Panel>
           </Tabs>
