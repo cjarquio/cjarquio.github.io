@@ -2,6 +2,7 @@ import { Container, Flex, Group, Tabs, Image } from '@mantine/core';
 import { AboutMe } from './AboutMe/AboutMe';
 import ProfilePic from '../../shared/images/Profile.jpg';
 import { Experience } from './Experience/Experience';
+import { Education } from './Education/Education';
 
 export const About = () => {
   return (
@@ -33,7 +34,9 @@ export const About = () => {
             <Tabs.Panel value="experience">
               <Experience />
             </Tabs.Panel>
-            <Tabs.Panel value="education">Education</Tabs.Panel>
+            <Tabs.Panel value="education">
+              <Education />
+            </Tabs.Panel>
             <Tabs.Panel value="skills">Skills</Tabs.Panel>
           </Tabs>
         </Flex>
