@@ -1,3 +1,4 @@
+'use client';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { ActionIcon, Container, Group, Text } from '@mantine/core';
 import classes from './Footer.module.css';
