@@ -1,7 +1,7 @@
 'use client';
 import { mantineHtmlProps, MantineProvider } from '@mantine/core';
-import Wrapper from '../components/Wrapper/Wrapper';
 import { BrowserRouter } from 'react-router-dom';
+import theme from './theme';
 
 export default function RootLayout({
   children,
@@ -11,10 +11,8 @@ export default function RootLayout({
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head></head>
-      <body>
-        <MantineProvider>
-          <BrowserRouter>{children}</BrowserRouter>
-        </MantineProvider>
+      <body className="antialiased">
+        <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
     </html>
   );
