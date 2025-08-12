@@ -17,12 +17,12 @@ export default function Page() {
       <AppShellHeader>
         <Header />
       </AppShellHeader>
-      {/* <AppShellMain>
+      <AppShellMain>
         <>HI</>
       </AppShellMain>
       <AppShellFooter p="lg">
         <Footer />
-      </AppShellFooter> */}
+      </AppShellFooter>
     </AppShell>
   );
 }

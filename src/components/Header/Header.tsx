@@ -46,12 +46,12 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
-      <Container size="md" className={styles.inner}>
+    <header className={'flex items-center h-[4rem]'}>
+      <Container size="md" className={'flex h-[3rem] justify-between w-full'}>
         <ActionIcon size="xxl" radius={'md'} color="gray" onClick={returnHome}>
           <Image
             component={NextImage}
-            className={styles.logo}
+            className={'h-full'}
             radius="md"
             src={Logo}
             alt="logo"

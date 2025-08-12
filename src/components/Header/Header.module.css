@@ -1,17 +1,3 @@
-.header {
-  height: 4rem;
-  margin-bottom: 120px;
-  display: flex;
-  align-items: center;
-}
-
-.inner {
-  height: 3rem;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .link {
   display: block;
   line-height: 1;
@@ -33,10 +19,6 @@
     background-color: var(--mantine-color-blue-filled);
     color: var(--mantine-color-white);
   }
-}
-
-.logo {
-  height: 100%;
 }
 
 .dark {
