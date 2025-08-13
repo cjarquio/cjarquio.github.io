@@ -1,5 +1,6 @@
 import {
   Card,
+  CardSection,
   Group,
   Image,
   ActionIcon,
@@ -20,9 +21,9 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <Card withBorder radius="md" p="md" className={classes.card}>
-      <Card.Section>
+      <CardSection>
         <Image src={project.imageUrl} alt={project.title} height={180} />
-      </Card.Section>
+      </CardSection>
       <Group mt="xs">
         <Text fz="lg" fw={500}>
           {project.title}
