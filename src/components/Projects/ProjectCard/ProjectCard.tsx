@@ -9,7 +9,7 @@ import {
   Button,
 } from '@mantine/core';
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
-import { ProjectProps } from '../Projects';
+import { ProjectProps } from '../projectList';
 import classes from './ProjectCard.module.css';
 
 interface ProjectCardProps {
