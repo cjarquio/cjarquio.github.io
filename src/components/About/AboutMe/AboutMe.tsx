@@ -10,11 +10,11 @@ export const AboutMe = () => {
         learning new skills to improve my craft.
       </Text>
       <Text>
-        I am an aspiring Software Engineer from the state of Hawai'i. I
+        I am an aspiring Software Engineer from the state of Hawai{"'"}i. I
         graduated from the University of Hawaii at Manoa with a degree in
         Computer Engineering. I am a fast learner with excellent time management
-        who's always eager to learn more; which is why I decided to attend the
-        Nucamp Web Developer boot camp to continue my education. Through a
+        who{"'"}s always eager to learn more; which is why I decided to attend
+        the Nucamp Web Developer boot camp to continue my education. Through a
         combination of these courses, I have gained a strong work ethic in
         individual and team based settings.
       </Text>

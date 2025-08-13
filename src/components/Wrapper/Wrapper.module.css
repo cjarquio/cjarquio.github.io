@@ -1,5 +1,7 @@
-Main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+:global {
+  Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

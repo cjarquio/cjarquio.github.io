@@ -1,18 +1,10 @@
 import { Container, SimpleGrid } from '@mantine/core';
-import { ProjectCard } from './ProjectCard/ProjectCard';
-import { projects } from './helperFunctions';
-import classes from './Projects.module.css';
+import { ProjectCard } from '@/components/Projects/ProjectCard/ProjectCard';
+import { projects, ProjectProps } from '@/components/Projects/projectList';
 
-export interface ProjectProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-}
-
-export const Projects = () => {
+export const ProjectsPage = () => {
   return (
-    <Container className={classes.main} size="xl">
+    <Container className={'flex items-center justify-evenly w-full'} size="xl">
       <SimpleGrid
         mt={60}
         cols={{ base: 1, sm: 2, md: 3 }}
@@ -27,4 +19,4 @@ export const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;

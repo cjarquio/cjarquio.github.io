@@ -1,6 +1,6 @@
+'use client';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { ActionIcon, Container, Group, Text } from '@mantine/core';
-import classes from './Footer.module.css';
 
 export const Footer = () => {
   const openExternalLink = (link: string) => {
@@ -8,15 +8,12 @@ export const Footer = () => {
   };
 
   return (
-    <div className={classes.footer}>
-      <Container className={classes.inner}>
+    <div className={'flex items-center h-[4rem]'}>
+      <Container
+        className={'flex h-[3rem] flex-col sm:flex-row justify-between'}
+      >
         <Text size="2.5rem">🤙🏽</Text>
-        <Group
-          gap={0}
-          className={classes.links}
-          justify="flex-end"
-          wrap="nowrap"
-        >
+        <Group gap={0} justify="flex-end" wrap="nowrap">
           <ActionIcon
             size="lg"
             color="gray"

@@ -1,3 +1,4 @@
+'use client';
 import {
   Button,
   Container,
@@ -8,10 +9,11 @@ import {
   Textarea,
   TextInput,
 } from '@mantine/core';
-import { ContactIconsList } from './ContactIcons';
-import classes from './Contact.module.css';
+import { ContactIconsList } from '@/components/Contact/ContactIcons/ContactIcons';
+import classes from './contact.module.css';
 
-export const Contact = () => {
+// TODO: Connect to emailjs
+export const ContactPage = () => {
   return (
     <Container size="md">
       <Paper shadow="md" radius="lg">
@@ -68,4 +70,4 @@ export const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

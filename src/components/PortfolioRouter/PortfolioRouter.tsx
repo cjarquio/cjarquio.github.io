@@ -1,3 +1,4 @@
+'use client';
 import { Routes, Route } from 'react-router';
 import Contact from '../Contact/Contact';
 import Projects from '../Projects/Projects';

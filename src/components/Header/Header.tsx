@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import {
   ActionIcon,
@@ -8,9 +9,11 @@ import {
   Image,
 } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import Logo from '../../shared/images/Logo.jpeg';
-import classes from './Header.module.css';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
+import NextImage from 'next/image';
+import styles from './Header.module.css';
+import Logo from '../../assets/images/Logo.jpeg';
 
 const links = [
   { link: '/about', label: 'About Me' },
@@ -19,40 +22,44 @@ const links = [
 ];
 
 const Header = () => {
-  const location = useLocation();
-  const [active, setActive] = useState<string | null>(location.pathname);
+  const router = useRouter();
+  const pathname = usePathname();
+  const [active, setActive] = useState<string | null>(pathname || null);
   const { setColorScheme } = useMantineColorScheme();
-  const navigate = useNavigate();
   const computedColorScheme = useComputedColorScheme('light', {
     getInitialValueInEffect: true,
   });
 
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
       href={link.link}
-      className={classes.link}
+      className={styles.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
+      onClick={() => {
         setActive(link.link);
-        navigate(link.link);
       }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   const returnHome = () => {
+    router.push('/');
     setActive(null);
-    navigate('/');
   };
 
   return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
+    <header className={'flex items-center h-[4rem]'}>
+      <Container size="md" className={'flex h-[3rem] justify-between w-full'}>
         <ActionIcon size="xxl" radius={'md'} color="gray" onClick={returnHome}>
-          <Image className={classes.logo} radius="md" src={Logo} />
+          <Image
+            component={NextImage}
+            className={'h-full'}
+            radius="md"
+            src={Logo}
+            alt="logo"
+          />
         </ActionIcon>
         <Group gap={5} visibleFrom="xs">
           {items}
@@ -67,9 +74,9 @@ const Header = () => {
             aria-label="Toggle color scheme"
           >
             {computedColorScheme === 'light' ? (
-              <IconSun className={classes.light} stroke={1.5} />
+              <IconSun className={styles.light} stroke={1.5} />
             ) : (
-              <IconMoon className={classes.dark} stroke={1.5} />
+              <IconMoon className={styles.dark} stroke={1.5} />
             )}
           </ActionIcon>
         </Group>
