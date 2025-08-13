@@ -1,6 +1,16 @@
-import { Container, Flex, Group, Tabs, Image } from '@mantine/core';
+import {
+  Container,
+  Flex,
+  Group,
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
+  Image,
+} from '@mantine/core';
+import NextImage from 'next/image';
 import { AboutMe } from './AboutMe/AboutMe';
-import ProfilePic from '../../shared/images/Profile.jpg';
+import ProfilePic from '../../assets/images/Profile.jpg';
 import { Experience } from './Experience/Experience';
 import { Education } from './Education/Education';
 
@@ -11,33 +21,33 @@ export const About = () => {
         <Container>
           <Image
             src={ProfilePic}
+            component={NextImage}
+            className="h-full w-auto"
             alt="Me"
             fit="contain"
-            height={'100%'}
-            width={'auto'}
             radius="md"
           />
         </Container>
         <Flex gap={5} justify="start" align="start">
           <Tabs defaultValue="about" orientation="vertical">
-            <Tabs.List>
-              <Tabs.Tab value="about">About Me</Tabs.Tab>
-              <Tabs.Tab value="experience">Experience</Tabs.Tab>
-              <Tabs.Tab value="education">Education</Tabs.Tab>
-              <Tabs.Tab value="skills">Skills</Tabs.Tab>
-            </Tabs.List>
+            <TabsList>
+              <TabsTab value="about">About Me</TabsTab>
+              <TabsTab value="experience">Experience</TabsTab>
+              <TabsTab value="education">Education</TabsTab>
+              <TabsTab value="skills">Skills</TabsTab>
+            </TabsList>
 
             {/** TODO: Create separate components for each section */}
-            <Tabs.Panel value="about">
+            <TabsPanel value="about">
               <AboutMe />
-            </Tabs.Panel>
-            <Tabs.Panel value="experience">
+            </TabsPanel>
+            <TabsPanel value="experience">
               <Experience />
-            </Tabs.Panel>
-            <Tabs.Panel value="education">
+            </TabsPanel>
+            <TabsPanel value="education">
               <Education />
-            </Tabs.Panel>
-            <Tabs.Panel value="skills">Skills</Tabs.Panel>
+            </TabsPanel>
+            <TabsPanel value="skills">Skills</TabsPanel>
           </Tabs>
         </Flex>
       </Group>
