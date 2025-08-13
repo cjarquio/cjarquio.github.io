@@ -9,7 +9,7 @@ import {
   Image,
 } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import styles from './Header.module.css';
@@ -22,9 +22,10 @@ const links = [
 ];
 
 const Header = () => {
-  const [active, setActive] = useState<string | null>();
-  const { setColorScheme } = useMantineColorScheme();
   const router = useRouter();
+  const pathname = usePathname();
+  const [active, setActive] = useState<string | null>(pathname || null);
+  const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme('light', {
     getInitialValueInEffect: true,
   });
