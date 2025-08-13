@@ -1,5 +1,5 @@
 import { Container } from '@mantine/core';
-import { jobs } from '../helperFunctions';
+import { jobs } from './jobs';
 import JobDescription, { JobDescriptionProps } from './JobDescription';
 
 export const Experience = () => {
