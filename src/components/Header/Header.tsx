@@ -9,6 +9,8 @@ import {
   Image,
 } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import NextImage from 'next/image';
 import styles from './Header.module.css';
 import Logo from '../../assets/images/Logo.jpeg';
@@ -22,26 +24,27 @@ const links = [
 const Header = () => {
   const [active, setActive] = useState<string | null>();
   const { setColorScheme } = useMantineColorScheme();
+  const router = useRouter();
   const computedColorScheme = useComputedColorScheme('light', {
     getInitialValueInEffect: true,
   });
 
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
       href={link.link}
       className={styles.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
+      onClick={() => {
         setActive(link.link);
       }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   const returnHome = () => {
+    router.push('/');
     setActive(null);
   };
 
