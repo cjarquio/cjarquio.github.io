@@ -1,6 +1,5 @@
 import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
 import { Box, Stack, Text } from '@mantine/core';
-import classes from './ContactIcons.module.css';
 
 interface ContactIconProps
   extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
@@ -16,16 +15,16 @@ export const ContactIcon = ({
   ...others
 }: ContactIconProps) => {
   return (
-    <div className={classes.wrapper} {...others}>
+    <div className={'flex items-center'} {...others}>
       <Box mr="md">
         <Icon size={24} />
       </Box>
 
       <div>
-        <Text size="xs" className={classes.title}>
+        <Text size="xs" className={'mr-md'}>
           {title}
         </Text>
-        <Text className={classes.description}>{description}</Text>
+        <Text>{description}</Text>
       </div>
     </div>
   );
